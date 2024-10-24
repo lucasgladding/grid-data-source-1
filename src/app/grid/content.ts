@@ -12,8 +12,8 @@ function createAssignee(): User {
 function createTicket(): Ticket {
   return {
     id: faker.string.uuid().slice(0, 5),
-    name: faker.lorem.words(2),
-    assignees: [createAssignee(), createAssignee(), createAssignee()],
+    name: faker.lorem.sentence(3),
+    assignees: [createAssignee(), createAssignee()],
   };
 }
 
