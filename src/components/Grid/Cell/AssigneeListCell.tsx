@@ -7,7 +7,7 @@ interface Props {
 
 export function AssigneeListCell({ value }: Props) {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-4">
       {value.map((assignee) => (
         <AssigneeCell key={assignee.id} value={assignee} />
       ))}
