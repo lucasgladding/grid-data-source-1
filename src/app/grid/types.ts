@@ -1,5 +1,11 @@
+export interface User {
+  id: string;
+  name: string;
+  image: string;
+}
+
 export interface Ticket {
   id: string;
   name: string;
-  assignee: string;
+  assignees: User[];
 }

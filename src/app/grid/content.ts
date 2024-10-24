@@ -1,7 +1,26 @@
-import { Ticket } from "@/app/grid/types";
+import { Ticket, User } from "@/app/grid/types";
+import { faker } from "@faker-js/faker";
+
+function createAssignee(): User {
+  return {
+    id: faker.string.uuid(),
+    name: faker.name.firstName(),
+    image: faker.image.url(),
+  };
+}
+
+function createTicket(): Ticket {
+  return {
+    id: faker.string.uuid().slice(0, 5),
+    name: faker.lorem.words(2),
+    assignees: [createAssignee(), createAssignee(), createAssignee()],
+  };
+}
 
 export const data: Ticket[] = [
-  { id: "1", name: "Ticket 1", assignee: "Lucas" },
-  { id: "2", name: "Ticket 2", assignee: "Gerrie" },
-  { id: "3", name: "Ticket 3", assignee: "Darren" },
+  createTicket(),
+  createTicket(),
+  createTicket(),
+  createTicket(),
+  createTicket(),
 ];
