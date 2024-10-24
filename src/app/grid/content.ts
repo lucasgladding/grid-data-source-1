@@ -13,7 +13,13 @@ function createTicket(): Ticket {
   return {
     id: faker.string.uuid().slice(0, 5),
     name: faker.lorem.sentence(3),
-    assignees: [createAssignee(), createAssignee()],
+    assignees: [
+      createAssignee(),
+      createAssignee(),
+      createAssignee(),
+      createAssignee(),
+      createAssignee(),
+    ],
   };
 }
 
