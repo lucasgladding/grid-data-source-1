@@ -5,6 +5,7 @@ import { ColDef } from "ag-grid-community";
 import { Ticket } from "@/data/types";
 import { tickets } from "@/data/tickets";
 import { AssigneeGroup } from "@/components/Grid/Cell/AssigneeGroup";
+import { AttachmentGroup } from "@/components/Grid/Cell/AttachmentGroup";
 
 type Column = ColDef<Ticket>;
 
@@ -12,6 +13,7 @@ const columns: Column[] = [
   { field: "id", headerName: "ID" },
   { field: "name", headerName: "Ticket", width: 400 },
   { field: "assignees", cellRenderer: AssigneeGroup },
+  { field: "attachments", cellRenderer: AttachmentGroup, width: 500 },
 ];
 
 export function SampleGrid() {
