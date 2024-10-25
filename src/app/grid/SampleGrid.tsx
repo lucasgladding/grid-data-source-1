@@ -19,7 +19,7 @@ const columns: Column[] = [
 
 export function SampleGrid() {
   return (
-    <div className="ag-theme-quartz" style={{ height: 800 }}>
+    <div className="ag-theme-quartz" style={{ height: 1000 }}>
       <AgGridReact rowData={tickets} columnDefs={columns} />
     </div>
   );

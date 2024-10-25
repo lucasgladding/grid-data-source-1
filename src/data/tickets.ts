@@ -18,8 +18,8 @@ function createTicket(): Ticket {
   return {
     id: faker.string.uuid().slice(0, 5),
     name: capitalize(faker.lorem.words(3)),
-    assignees: times(count(), () => createAssignee()),
-    attachments: times(count(), () => createAttachment()),
+    assignees: times(count(1, 5), () => createAssignee()),
+    attachments: times(count(0, 2), () => createAttachment()),
   };
 }
 

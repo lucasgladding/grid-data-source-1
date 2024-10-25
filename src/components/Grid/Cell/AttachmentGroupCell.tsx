@@ -7,7 +7,7 @@ interface Props {
 
 export function AttachmentGroupCell({ value }: Props) {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-x-0.5">
       <LinkIcon className="size-4" />
       {value.name}
     </div>
