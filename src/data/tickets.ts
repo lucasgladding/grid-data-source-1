@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { Ticket, User } from "@/app/grid/types";
+import { Ticket, User } from "@/data/types";
 import { capitalize, times } from "@/data/helpers";
 
 function createAssignee(): User {

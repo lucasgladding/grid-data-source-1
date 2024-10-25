@@ -1,4 +1,4 @@
-import { User } from "@/app/grid/types";
+import { User } from "@/data/types";
 import { Avatar } from "@mui/material";
 
 interface Props {
