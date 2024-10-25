@@ -1,15 +1,6 @@
-import { Ticket, User } from "@/app/grid/types";
 import { faker } from "@faker-js/faker";
-
-function capitalize(input: string): string {
-  return input[0].toUpperCase() + input.slice(1);
-}
-
-function times<T>(count: number, fn: () => T): T[] {
-  return new Array(count).fill(0).map(() => {
-    return fn();
-  });
-}
+import { Ticket, User } from "@/app/grid/types";
+import { capitalize, times } from "@/data/helpers";
 
 function createAssignee(): User {
   return {
@@ -28,10 +19,4 @@ function createTicket(): Ticket {
   };
 }
 
-export const data: Ticket[] = [
-  createTicket(),
-  createTicket(),
-  createTicket(),
-  createTicket(),
-  createTicket(),
-];
+export const tickets: Ticket[] = times(10, () => createTicket());
